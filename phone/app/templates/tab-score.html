@@ -1,0 +1,20 @@
+<ion-view title="Current Score">
+  <ion-content class="has-header padding">
+
+    <div class="">
+      <button class="button button-block button-assertive" ng-click="update('home',home.score,-1)"><h1>-</h1></button>
+      <h1>{{home.name}}:{{home.score}}</h1>
+      <button class="button button-block button-balanced" ng-click="update('home',home.score,1)"><h1>+</h1></button>
+    </div>
+
+    <div class="">
+      <button class="button button-block button-assertive" ng-click="update('visitor',visitor.score,-1)">-</button>
+      <h1>{{visitor.name}}:{{visitor.score}}</h1>
+      <button class="button button-block button-balanced" ng-click="update('visitor',visitor.score,1)">+</button>
+    <div>
+    <label for="homename">Home player/team name</label>
+    <input id="homename" ng-init="home.name='Home'" ng-init ng-model="home.name">
+    <label for="visitorname">Visitor player/team name</label>
+    <input id="visitorname" ng-init="visitor.name='Visitor'" ng-model="visitor.name">
+  </ion-content>
+</ion-view>

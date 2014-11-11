@@ -39,12 +39,12 @@ angular.module('Phone', ['ionic', 'config', 'Phone.controllers', 'Phone.services
 
     // Each tab has its own nav history stack:
 
-    .state('tab.dash', {
-      url: '/dash',
+    .state('tab.score', {
+      url: '/score',
       views: {
-        'tab-dash': {
-          templateUrl: 'templates/tab-dash.html',
-          controller: 'DashCtrl'
+        'tab-score': {
+          templateUrl: 'templates/tab-score.html',
+          controller: 'ScoreCtrl'
         }
       }
     })
@@ -79,7 +79,6 @@ angular.module('Phone', ['ionic', 'config', 'Phone.controllers', 'Phone.services
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/score');
 
 });
-
