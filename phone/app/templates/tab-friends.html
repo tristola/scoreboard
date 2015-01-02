@@ -1,8 +1,9 @@
-<ion-view title="Friends">
+<ion-view title="Game Scores">
   <ion-content class="has-header">
     <ion-list>
-      <ion-item class="item-icon-right" ng-repeat="friend in friends" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
-        {{friend.name}}
+      <ion-item class="item-icon-right" ng-repeat="game in games" type="item-text-wrap" href="#/tab/friend/{{friend.id}}">
+        <h1>{{game.teams[0].players}} {{game.teams[0].score}}</h1>
+        <h1>{{game.teams[1].players}} {{game.teams[1].score}}</h1>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>

@@ -54,7 +54,7 @@ angular.module('Phone', ['ionic', 'config', 'Phone.controllers', 'Phone.services
       views: {
         'tab-friends': {
           templateUrl: 'templates/tab-friends.html',
-          controller: 'FriendsCtrl'
+          controller: 'GamesCtrl'
         }
       }
     })

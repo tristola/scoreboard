@@ -21,11 +21,21 @@ angular.module('Phone.controllers', [])
 
 })
 
-.controller('FriendsCtrl', function($scope, Friends) {
-  $scope.friends = Friends.all();
+.controller('GamesCtrl', function($scope, Games) {
+  $scope.games = [{"_id":"5461cf251904dc3a6583b229","timestamp":"2014-11-11T08:56:05.808Z","tags":["tre"],
+                  "teams":[{"score":10,"_id":"5461cf251904dc3a6583b22b","players":["Teemu","JussiNi"]},
+                  {"score":6,"_id":"5461cf251904dc3a6583b22a","players":["NikoJ","JariV"]}],"__v":0},
+                  {"_id":"5461cf251904dc3a6583b229","timestamp":"2014-11-11T08:56:05.808Z","tags":["tre"],
+                  "teams":[{"score":10,"_id":"5461cf251904dc3a6583b22b","players":["Teemu","JussiNi"]},
+                                  {"score":6,"_id":"5461cf251904dc3a6583b22a","players":["NikoJ","JariV"]}],"__v":0}];
+  //$http.get('/games.json').success(function(data){
+      //$scope.games=data;
+//  });
+
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
+.controller('FriendDetailCtrl', function($scope, $stateParams, Games) {
+  $scope.games = Games.all();
 })
 
 .controller('AccountCtrl', function($scope) {
